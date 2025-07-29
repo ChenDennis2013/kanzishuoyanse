@@ -58,29 +58,53 @@ function guess(col : string)
 </script>
 
 <template>
-  <div style="font-size: 3em;">
-    时间：{{ time }}
-    &nbsp;&nbsp;&nbsp;
-    分数: {{ score }}
-    &nbsp;&nbsp;&nbsp;
-    <button @click="rest();" id="restbtn" style="font-size: 1em;">开始</button>
-  </div>
-  <p style="font-size: 8em; margin: 10px;" id="main">&ensp;</p>
-  <div style="font-size: 2em;">
+  <div class="all">
+    <div class="title">
+        时间：{{ time }}
+        &nbsp;&nbsp;&nbsp;
+        分数: {{ score }}
+        &nbsp;&nbsp;&nbsp;
+        <button @click="rest();" id="restbtn" style="font-size: 1em;">开始</button>
+    </div>
+    <p style="font-size: 4em; margin: 10px;" id="main">&ensp;</p>
     <div>
-        <button @click="guess('red');" class="colbtn">红</button>&nbsp;&nbsp;
-        <button @click="guess('orange');" class="colbtn">橙</button>&nbsp;&nbsp;
-        <button @click="guess('yellow');" class="colbtn">黄</button>
-    </div>&ensp;
-    <div>
-        <button @click="guess('green');" class="colbtn">绿</button>&nbsp;&nbsp;
-        <button @click="guess('cyan');" class="colbtn">青</button>&nbsp;&nbsp;
-        <button @click="guess('blue');" class="colbtn">蓝</button>
-    </div>&ensp;
-    <div>
-        <button @click="guess('purple');" class="colbtn">紫</button>&nbsp;&nbsp;
-        <button @click="guess('pink');" class="colbtn">粉</button>&nbsp;&nbsp;
-        <button @click="guess('black');" class="colbtn">黑</button>
+        <div>
+            <button @click="guess('red');" class="colbtn">红</button>&nbsp;&nbsp;
+            <button @click="guess('orange');" class="colbtn">橙</button>&nbsp;&nbsp;
+            <button @click="guess('yellow');" class="colbtn">黄</button>
+        </div>&ensp;
+        <div>
+            <button @click="guess('green');" class="colbtn">绿</button>&nbsp;&nbsp;
+            <button @click="guess('cyan');" class="colbtn">青</button>&nbsp;&nbsp;
+            <button @click="guess('blue');" class="colbtn">蓝</button>
+        </div>&ensp;
+        <div>
+            <button @click="guess('purple');" class="colbtn">紫</button>&nbsp;&nbsp;
+            <button @click="guess('pink');" class="colbtn">粉</button>&nbsp;&nbsp;
+            <button @click="guess('black');" class="colbtn">黑</button>
+        </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+    .all
+    {
+        font-size: 2em;
+    }
+    .title
+    {
+        font-size: 1.5em;
+    }
+    @media screen and (max-width: 480px)
+    {
+        .all
+        {
+            font-size: 1.5em;
+        }
+        .title
+        {
+            font-size: 1em;
+        }
+    }
+</style>
