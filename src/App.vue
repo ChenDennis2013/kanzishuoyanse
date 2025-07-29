@@ -41,17 +41,19 @@ function rest()
 {
     if (isNaN(intv)) (document.querySelector("#restbtn") as HTMLButtonElement).innerHTML = "重新开始";
     else clearInterval(intv);
-    refr(); intv = setInterval(refr, 3000);
+    refr(); intv = setInterval(refr, 1500);
     if (!isNaN(timer)) clearInterval(timer);
     time.value = 60; timer = setInterval(tick, 1000);
+    score.value = 0;
 }
 function guess(col : string)
 {
+    if (!time) return; //时间结束不可加分
     const q = document.querySelector("#main") as HTMLParagraphElement;
     if (col == q.style.color) ++ score.value;
     else -- score.value;
     clearInterval(intv);
-    refr(); intv = setInterval(refr, 3000);
+    refr(); intv = setInterval(refr, 1500);
 }
 </script>
 
