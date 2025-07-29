@@ -48,7 +48,7 @@ function rest()
 }
 function guess(col : string)
 {
-    if (!time) return; //时间结束不可加分
+    if (!time.value) return; //时间结束不可加分
     const q = document.querySelector("#main") as HTMLParagraphElement;
     if (col == q.style.color) ++ score.value;
     else -- score.value;
