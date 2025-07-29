@@ -58,15 +58,15 @@ function guess(col : string)
 </script>
 
 <template>
-  <div style="font-size: 1.5em;">
+  <div style="font-size: 3em;">
     时间：{{ time }}
     &nbsp;&nbsp;&nbsp;
     分数: {{ score }}
     &nbsp;&nbsp;&nbsp;
     <button @click="rest();" id="restbtn" style="font-size: 1em;">开始</button>
   </div>
-  <p style="font-size: 4em; margin: 10px;" id="main">&ensp;</p>
-  <div>
+  <p style="font-size: 8em; margin: 10px;" id="main">&ensp;</p>
+  <div style="font-size: 2em;">
     <div>
         <button @click="guess('red');" class="colbtn">红</button>&nbsp;&nbsp;
         <button @click="guess('orange');" class="colbtn">橙</button>&nbsp;&nbsp;
